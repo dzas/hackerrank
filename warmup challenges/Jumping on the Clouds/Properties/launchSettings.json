@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Jumping on the Clouds": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "OUTPUT_PATH": "result.txt"
+      }
+    }
+  }
+}
