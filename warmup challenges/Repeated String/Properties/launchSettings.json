@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Repeated String": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "OUTPUT_PATH": "result.txt"
+      }
+    }
+  }
+}
