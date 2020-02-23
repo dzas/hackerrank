@@ -1,27 +1,43 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace _2D_Array___DS
 {
     class Program
     {
-        int HourglassSum(int[,] arr)
+        static int HourglassSum(int[,] arr)
         {
             int[,] subArray = new int[3, 3];
-            var w = arr.GetLength(0) / subArray.GetLength(0);
-            var h = arr.GetLength(1) / subArray.GetLength(1);
-            int[][,] glasses = new int[w * h][,];
+            var w = arr.GetLength(0) - subArray.GetLength(0) + 1;
+            var h = arr.GetLength(1) - subArray.GetLength(1) + 1;
+            int? prevSum = null;
 
             for (int i = 0; i < w; i++)
             {
-                for (int j = 0; i < h; i++)
+                for (int j = 0; j < h; j++)
                 {
-                    subArray
-                }
+                    int sum = 0;
+                    sum += arr[i, j];
+                    sum += arr[i, j + 1];
+                    sum += arr[i, j + 2];
+                    sum += arr[i + 1, j + 1];
+                    sum += arr[i + 2, j];
+                    sum += arr[i + 2, j + 1];
+                    sum += arr[i + 2, j + 2];
+
+                    if (prevSum == null)
+                    {
+                        prevSum = sum;
+                    }
+                    else if (prevSum < sum)
+                    {
+                        prevSum = sum;
+                    }
+                };
             }
-
+            return prevSum.Value;
         }
-
 
         static void Main(string[] args)
         {

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "2D Array - DS": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "OUTPUT_PATH": "result.txt"
+      }
+    }
+  }
+}
