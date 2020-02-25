@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Left Rotation": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "OUTPUT_PATH": "result.txt"
+      }
+    }
+  }
+}
