@@ -10,10 +10,11 @@ namespace Left_Rotation
         {
             var rotCount = d % a.Length;
 
-
-            for (int pass = a.GetUpperBound(0); pass > a.GetUpperBound(0) - rotCount; pass--)
+            var passes = a.Length - rotCount;
+            var i = 1;
+            for (int pass = a.GetUpperBound(0); pass > a.GetUpperBound(0) - passes; pass--)
             {
-                var startIndex = a[a.GetUpperBound(0) - pass];
+                var startIndex = pass;
                 var passed = false;
                 var src = startIndex;
                 var srcVal = a[src];
@@ -29,15 +30,17 @@ namespace Left_Rotation
                     var destVal = a[dest];
                     a[dest] = srcVal;
                     srcVal = destVal;
+                    Console.WriteLine($"from {src} copy to {dest}");
                     src = dest;
-                    passed = startIndex == src;
+                    passed = startIndex == dest;
                 }
+                Console.Write(string.Join(" ", a));
+                Console.WriteLine($" - pass #{i}");
+                i++;
             }
 
             return a;
         }
-
-
 
         static void Main(string[] args)
         {
