@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Array Manipulation": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "OUTPUT_PATH": "result.txt"
+      }
+    }
+  }
+}
